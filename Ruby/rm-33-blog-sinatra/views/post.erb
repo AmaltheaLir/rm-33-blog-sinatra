@@ -1,0 +1,20 @@
+#single posts should link to here, Get them by their id, which is linked from the main page, or via search or whatever. 
+<a href='/'>&lt; home</a>
+
+<h1> <%= @post[:title] %> </h1>
+
+<div action='/' method='get' width='100%'>
+
+  <p>
+    <%= @post[:author] %>
+  </p>
+
+  <p>
+    <%= @post[:content] %>
+  </p>
+
+  <a href="/posts/<%= @post[:id] %>/edit">Edit post</a>
+
+</div>
+
+#link to editing HERE - or somewherrrrre

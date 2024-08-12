@@ -1,0 +1,50 @@
+#main
+<h1>Boring Blog of Blogginess</h1>
+<p>There are even better ways to waste your time</p>
+
+
+<% @posts.each do | post| %>
+  <br>
+   <a href="/posts/<%= post[:id] %>"><%= post[:title] %></a>
+<% end %>
+<br>
+
+<p> Make new post:</p>
+
+<form action='/posts' method='POST'>
+  <input type='text' name='title' placeholder='post title here'\>
+  <input type='text' name='author' placeholder='author name'\>
+  <input type='text' name='content' placeholder='Post content'\>
+  <input type='submit' value='submit'\>
+</form>
+<br>
+
+<p><a href="/posts/edit">Edit posts</a></p>
+
+<div action='/' method='get' width='100%'>
+<br>
+
+<h3>Posts as a Scrolly Polly List:</h3>
+
+<% @posts.each do | post| %>
+  <h2><%= post[:id] %></h2>
+
+  <h2>
+    <%= post[:title] %>
+  </h2>
+
+  <p>
+    <%= post[:author] %>
+  </p>
+
+  <p>
+    <%= post[:content] %>
+  </p>
+
+<% end %>
+</div>
+<br>
+
+
+
+
