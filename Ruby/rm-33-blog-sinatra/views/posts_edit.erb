@@ -1,5 +1,4 @@
 
-#working on this posts/edit
 
 <a href='/'>&lt; home</a>
 
@@ -21,6 +20,9 @@
       <%=  post[:author] %>
     </td>
     <td>
+      <%=  post[:date_added] %>
+    </td>
+    <td>
       <%=  post[:content] %>
     </td>
 
@@ -30,7 +32,7 @@
         <input type='submit' value='Delete FOREVER'\>
       </form>
       
-      <a href="/posts/<%= post[:id] %>/edit">Edit post</a>
+      <a href="/posts/<%= post[:id] %>/edit">post_edit_form</a>
             
 
     </td>
