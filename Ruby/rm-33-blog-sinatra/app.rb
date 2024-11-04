@@ -20,6 +20,7 @@ DB = Sequel.sqlite('app.db')
 
 get '/' do
   @posts = DB[:posts]
+  @time_of_day = Time.now.to_s
   erb :posts
 end
 
@@ -80,3 +81,4 @@ post "/posts/:id/remove" do
 
   redirect "/posts/edit"
 end
+
